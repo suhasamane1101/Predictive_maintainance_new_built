@@ -16,6 +16,29 @@ A web-based predictive maintenance system that uses machine learning to predict 
   - Torque
   - Tool Wear
 
+## 📸 Screenshots
+
+### Authentication Login and Signup
+![Dashboard](static/images/Authentication.png)
+*Authentication using Mongodb atlas*
+
+### Dashboard Interface
+![Dashboard](static/images/Dashboard.png)
+*Main dashboard showing the predictive maintenance interface*
+
+### Prediction Results
+![Prediction](static/images/Prediction_result.png)
+*Real-time prediction results and analysis*
+
+### About Page
+![About Details](static/images/About_page.png)
+*About Page*
+
+### Contact Us and Help page
+![Contact US](static/images/Contact_us_page.png)
+![Contact US](static/images/Help_page.png)
+*Contact US and Help page*
+
 ## 🛠️ Technology Stack
 
 - **Backend**: Flask (Python web framework)
