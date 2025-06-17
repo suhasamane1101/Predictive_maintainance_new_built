@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Turbine - Predictive Maintenance System{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="content-section">
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/download3.png') }}" alt="accuracy graph 1" class="mb-4">
+            <img src="{{ url_for('static', filename='images/download4.png') }}" alt="accuracy graph 2" class="mb-4">
+            <img src="{{ url_for('static', filename='images/dadfa.png') }}" alt="accuracy graph 3">
+        </div>
+
+        <div class="info">
+            <h2 class="mb-4">Accuracy Graph</h2>
+            <p class="lead">These graphs show the accuracy of our predictive maintenance model across different equipment types and operating conditions.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

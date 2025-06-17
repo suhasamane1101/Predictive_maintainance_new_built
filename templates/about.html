@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}About - Predictive Maintenance System{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 mb-4">About Our System</h1>
+        <p class="lead">Learn more about our predictive maintenance solution</p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="feature-card text-center">
+                <i class="fas fa-brain feature-icon"></i>
+                <h3>Machine Learning</h3>
+                <p>Our system uses advanced machine learning algorithms to predict equipment conditions and maintenance needs.</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="feature-card text-center">
+                <i class="fas fa-chart-line feature-icon"></i>
+                <h3>Real-time Analysis</h3>
+                <p>Monitor equipment conditions in real-time and receive instant predictions about maintenance requirements.</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="feature-card text-center">
+                <i class="fas fa-tools feature-icon"></i>
+                <h3>Preventive Care</h3>
+                <p>Prevent equipment failures by scheduling maintenance based on predictive analytics.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-12">
+            <div class="feature-card">
+                <h2 class="mb-4">How It Works</h2>
+                <p>Our predictive maintenance system uses a Random Forest model trained on historical equipment data to predict when maintenance will be required. The system takes into account various parameters such as:</p>
+                <ul>
+                    <li>Air Temperature</li>
+                    <li>Process Temperature</li>
+                    <li>Rotational Speed</li>
+                    <li>Torque</li>
+                    <li>Tool Wear</li>
+                </ul>
+                <p>By analyzing these parameters, our system can predict the condition of your equipment and provide recommendations for maintenance scheduling.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .feature-card {
+        background: var(--card-bg);
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+        border: 1px solid var(--accent-color);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        border-color: var(--text-primary);
+    }
+
+    .feature-icon {
+        font-size: 3rem;
+        color: var(--text-primary);
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover .feature-icon {
+        transform: scale(1.1);
+    }
+
+    .feature-card h3 {
+        color: var(--text-primary);
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .feature-card p {
+        color: var(--text-secondary);
+        opacity: 0.9;
+        line-height: 1.6;
+    }
+
+    .feature-card ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .feature-card ul li {
+        color: var(--text-secondary);
+        margin-bottom: 10px;
+        padding-left: 25px;
+        position: relative;
+    }
+
+    .feature-card ul li:before {
+        content: "•";
+        color: var(--text-primary);
+        position: absolute;
+        left: 0;
+        font-size: 1.2em;
+    }
+
+    .feature-card h2 {
+        color: var(--text-primary);
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+</style>
+{% endblock %} 

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Pump - Predictive Maintenance System{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="content-section">
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/pumps.jpg') }}" alt="pump" class="mb-4">
+        </div>
+
+        <div class="info">
+            <h2 class="mb-4">Pump</h2>
+            <p class="lead mb-4">A pump is a mechanical device used to move fluids (liquids or gases) from one place to another. It works by creating a pressure difference, which forces the fluid to flow. Here are some key points and examples:</p>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-list me-2"></i>Types of Pumps</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check me-2"></i>Centrifugal Pumps: These pumps use centrifugal force to create pressure and move fluid. They are commonly used in industries such as water treatment, agriculture, and chemical processing.</li>
+                        <li><i class="fas fa-check me-2"></i>Positive Displacement Pumps: These pumps trap a certain amount of fluid and then force it out. Examples include piston pumps, diaphragm pumps, and gear pumps.</li>
+                        <li><i class="fas fa-check me-2"></i>Submersible Pumps: These are designed to be submerged in the fluid they are pumping, commonly used for drainage, sewage pumping, and borehole pumping.</li>
+                        <li><i class="fas fa-check me-2"></i>Reciprocating Pumps: These pumps use a piston or diaphragm to move fluid, commonly found in high-pressure applications like hydraulic systems and certain industrial processes.</li>
+                        <li><i class="fas fa-check me-2"></i>Vacuum Pumps: These pumps are used to remove gas molecules from a sealed volume, creating a vacuum. Examples include rotary vane pumps and turbomolecular pumps.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-cogs me-2"></i>Functionality and Components</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-arrow-right me-2"></i>Inlet: Where the fluid enters the pump.</li>
+                        <li><i class="fas fa-arrow-right me-2"></i>Impeller (for centrifugal pumps): Rotating component that imparts energy to the fluid.</li>
+                        <li><i class="fas fa-arrow-right me-2"></i>Casing: Encloses the impeller and directs the flow of fluid.</li>
+                        <li><i class="fas fa-arrow-right me-2"></i>Outlet: Where the pressurized fluid exits the pump.</li>
+                        <li><i class="fas fa-arrow-right me-2"></i>Motor or Power Source: Provides the energy to drive the pump.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-industry me-2"></i>Examples of Pump Applications</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-water me-2"></i>Water Supply: Pumps are used to supply water from wells, reservoirs, or municipal water sources to homes, industries, and agricultural fields.</li>
+                        <li><i class="fas fa-oil-can me-2"></i>Oil and Gas Industry: Pumps are essential for transporting crude oil, refined products, and natural gas through pipelines.</li>
+                        <li><i class="fas fa-flask me-2"></i>Chemical Processing: Pumps are used to transfer various chemicals and fluids within manufacturing processes.</li>
+                        <li><i class="fas fa-temperature-low me-2"></i>Heating, Ventilation, and Air Conditioning (HVAC): Pumps are employed to circulate coolant or refrigerant in heating and cooling systems.</li>
+                        <li><i class="fas fa-recycle me-2"></i>Waste Management: Pumps are utilized in sewage systems, drainage systems, and wastewater treatment plants to move sewage and sludge.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

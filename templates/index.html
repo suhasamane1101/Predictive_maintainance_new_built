@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Predictive Maintenance System{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 mb-4">Predictive Maintenance System</h1>
+        <p class="lead">Monitor and predict equipment maintenance needs using advanced AI</p>
+    </div>
+</section>
+
+<!-- Equipment Cards -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card equipment-card mb-4">
+                <img src="{{ url_for('static', filename='images/motor.jpg') }}" class="card-img-top" alt="Motor">
+                <div class="card-body">
+                    <h5 class="card-title">Motor</h5>
+                    <p class="card-text">Monitor motor performance and predict maintenance needs.</p>
+                    <a href="{{ url_for('view_one') }}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card equipment-card mb-4">
+                <img src="{{ url_for('static', filename='images/pump.jpg') }}" class="card-img-top" alt="Pump">
+                <div class="card-body">
+                    <h5 class="card-title">Pump</h5>
+                    <p class="card-text">Track pump efficiency and maintenance requirements.</p>
+                    <a href="{{ url_for('view_two') }}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card equipment-card mb-4">
+                <img src="{{ url_for('static', filename='images/turbine.jpg') }}" class="card-img-top" alt="Turbine">
+                <div class="card-body">
+                    <h5 class="card-title">Turbine</h5>
+                    <p class="card-text">Analyze turbine performance and predict maintenance.</p>
+                    <a href="{{ url_for('view_three') }}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Prediction Form -->
+    <div class="row mt-5">
+        <div class="col-md-8 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Make a Prediction</h3>
+                    <form action="{{ url_for('predict') }}" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="UDI" class="form-label">UDI</label>
+                                <input type="number" step="any" class="form-control" id="UDI" name="UDI" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="Air_Temp" class="form-label">Air Temperature</label>
+                                <input type="number" step="any" class="form-control" id="Air_Temp" name="Air_Temp" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="Process_temperature" class="form-label">Process Temperature</label>
+                                <input type="number" step="any" class="form-control" id="Process_temperature" name="Process_temperature" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="Ratational_speed" class="form-label">Rotational Speed</label>
+                                <input type="number" step="any" class="form-control" id="Ratational_speed" name="Ratational_speed" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="Torque" class="form-label">Torque</label>
+                                <input type="number" step="any" class="form-control" id="Torque" name="Torque" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="Tool_wear" class="form-label">Tool Wear</label>
+                                <input type="number" step="any" class="form-control" id="Tool_wear" name="Tool_wear" required>
+                            </div>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Predict</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Prediction Result -->
+    {% if result is defined %}
+    <div class="row mt-4">
+        <div class="col-md-8 mx-auto">
+            <div class="alert alert-{{ status }}">
+                <h4 class="alert-heading">Prediction Result</h4>
+                <p>{{ text }}</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Predictive Maintenance System{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 mb-4">Contact Us</h1>
+        <p class="lead">Get in touch with our team for support and inquiries</p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="content-section">
+                <h2 class="mb-4">Send us a Message</h2>
+                <form action="{{ url_for('contact') }}" method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                    <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="content-section">
+                <div class="text-center mb-4">
+                    <i class="fas fa-map-marker-alt fa-2x mb-3" style="color: var(--text-primary);"></i>
+                    <h4>Our Location</h4>
+                    <p>123 Maintenance Street<br>Industrial Park, CA 90210</p>
+                </div>
+                <div class="text-center mb-4">
+                    <i class="fas fa-phone fa-2x mb-3" style="color: var(--text-primary);"></i>
+                    <h4>Phone Number</h4>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-envelope fa-2x mb-3" style="color: var(--text-primary);"></i>
+                    <h4>Email Address</h4>
+                    <p>support@predictivemaintenance.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Motor - Predictive Maintenance System{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="content-section">
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/motor2.jpg') }}" alt="motor" class="mb-4">
+        </div>
+
+        <div class="info">
+            <h2 class="mb-4">Motor Specification</h2>
+            <p class="lead mb-4">General information. Special motors is a wide term at Hoyer. Special is both when a motor is not a part of our standard range but also when if it is a customized designed made for a unique application at one of our customers.</p>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-bolt me-2"></i>Voltage Rating</h5>
+                    <p class="card-text">This indicates the electrical voltage required to operate the motor efficiently. For example, a motor might be rated for 120 volts AC or 24 volts DC.</p>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-cog me-2"></i>Torque</h5>
+                    <p class="card-text">Torque is the rotational force produced by the motor and is measured in pound-feet (lb-ft) or Newton-meters (Nm). Higher torque allows the motor to overcome resistance more effectively. A motor might have a torque rating of 10 lb-ft.</p>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-ruler me-2"></i>Frame Size</h5>
+                    <p class="card-text">Motors come in various frame sizes, which determine their physical dimensions and mounting specifications. Common frame sizes include NEMA (National Electrical Manufacturers Association) standards such as NEMA 56 or NEMA 34.</p>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-shield-alt me-2"></i>Insulation Class</h5>
+                    <p class="card-text">This denotes the motor's insulation system's thermal endurance, indicating its ability to withstand heat generated during operation. Common insulation classes include Class F or Class H.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-box me-2"></i>Enclosure Type</h5>
+                    <p class="card-text">Motors can have different enclosure types to suit various operating environments, such as open drip-proof (ODP), totally enclosed fan-cooled (TEFC), or explosion-proof (XP).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

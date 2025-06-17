@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}Help - Predictive Maintenance System{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 mb-4">Help Center</h1>
+        <p class="lead">Learn how to use our predictive maintenance system</p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="content-section">
+        <h2 class="mb-4"><i class="fas fa-book me-2"></i>Getting Started</h2>
+        <p class="lead">Follow these steps to get started with our predictive maintenance system:</p>
+        <ol class="list-group list-group-numbered mb-4">
+            <li class="list-group-item">Select the equipment you want to monitor (Motor, Pump, or Turbine)</li>
+            <li class="list-group-item">Enter the required parameters for prediction</li>
+            <li class="list-group-item">View the prediction results and equipment condition</li>
+        </ol>
+    </div>
+
+    <div class="content-section">
+        <h2 class="mb-4"><i class="fas fa-chart-line me-2"></i>Equipment Monitoring</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-motorcycle me-2"></i>Motors</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check me-2"></i>Temperature monitoring</li>
+                            <li><i class="fas fa-check me-2"></i>Vibration analysis</li>
+                            <li><i class="fas fa-check me-2"></i>Performance tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-pump me-2"></i>Pumps</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check me-2"></i>Flow rate monitoring</li>
+                            <li><i class="fas fa-check me-2"></i>Pressure analysis</li>
+                            <li><i class="fas fa-check me-2"></i>Efficiency tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-turbine me-2"></i>Turbines</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check me-2"></i>Power output monitoring</li>
+                            <li><i class="fas fa-check me-2"></i>Vibration tracking</li>
+                            <li><i class="fas fa-check me-2"></i>Temperature analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="mb-4"><i class="fas fa-question-circle me-2"></i>Need More Help?</h2>
+        <p class="lead">If you need additional assistance, please:</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body text-center">
+                        <i class="fas fa-book fa-2x mb-3" style="color: var(--text-primary);"></i>
+                        <h5>Check our FAQ section</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body text-center">
+                        <i class="fas fa-headset fa-2x mb-3" style="color: var(--text-primary);"></i>
+                        <h5>Contact our support team</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body text-center">
+                        <i class="fas fa-comment-alt fa-2x mb-3" style="color: var(--text-primary);"></i>
+                        <h5>Submit feedback</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
